@@ -1,4 +1,5 @@
-import 'package:barg_challenge/src/view/screens/login/login_screen.dart';
+import 'package:barg_challenge/src/domain/login_viewmodel.dart';
+import 'package:barg_challenge/src/presentation/presentation.dart';
 import 'package:get/get.dart';
 
 class AppRoutes{
@@ -9,6 +10,7 @@ class AppRoutes{
       GetPage(
         name: loginRoute,
         page: () => const LoginScreen(),
+        binding: BindingsBuilder(() => {Get.put(LoginViewModel())}),
       ),
     ];
   }
