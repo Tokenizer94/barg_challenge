@@ -1,16 +1,15 @@
 # barg_challenge
 
-A new Flutter project.
+## Folder Structure
+- - - -
+**config**: Contains all configuration files for the application such as routes, themes and internationalization.
 
-## Getting Started
+**core**: Contains all core files such as helper files and constants which will be used across the application.
 
-This project is a starting point for a Flutter application.
+**data**: Contains api services or database related services. Also contains dart models. This forlder is equal
+to `model` layer in MVVM architecture.
 
-A few resources to get you started if this is your first Flutter project:
+**domain**: Contains ViewModel files which will extend from GetxController. This folder is equal to `ViewModel`
+layer in MVVM architecture.
 
-- [Lab: Write your first Flutter app](https://flutter.dev/docs/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://flutter.dev/docs/cookbook)
-
-For help getting started with Flutter, view our
-[online documentation](https://flutter.dev/docs), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+**view**: Contains UI files and component widgets. This folder is equal to `View` layer in MVVM architecture.
