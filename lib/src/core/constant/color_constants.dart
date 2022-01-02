@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 
 const List<Color> kPaletteColors = <Color>[
   /// Primary Color
-  Color(0xFF252A34),
+  Color(0xFFEAEAEA),
 
   /// Secondary Color
   Color(0xFF08D9D6),
@@ -11,5 +11,5 @@ const List<Color> kPaletteColors = <Color>[
   Color(0xFFFF2E63),
 
   /// Background Color
-  Color(0xFFEAEAEA),
+  Color(0xFF252A34),
 ];

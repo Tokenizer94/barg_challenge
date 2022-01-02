@@ -8,6 +8,13 @@ abstract class AppTranslation {
 final Map<String, String> en_US = {
   /// Short Texts
   'app_title': 'Barg',
+  'username': 'Username',
+  'password': 'Password',
+  'login': 'Login',
+  'at_least': 'At least',
+  'char_required': 'characters required',
+  'required':'required*',
+  'login_failed':'Login Failed',
   /// Long Texts
-  'app_description': '',
+  'login_fail_desc':'Username or password is not correct',
 };

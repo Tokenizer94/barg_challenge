@@ -1,4 +1,4 @@
-include: package:flutter_lints/flutter.yaml
+include: package:lint/analysis_options.yaml
 
 linter:
   rules:
@@ -12,6 +12,7 @@ analyzer:
     - lib/**.g.dart
     - lib/**.freezed.dart
   errors:
+    invalid_annotation_target: ignore
     missing_required_param: error
     parameter_assignments: error
     missing_return: error
