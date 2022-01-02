@@ -4,6 +4,7 @@ import 'package:get/get.dart';
 
 class AppRoutes{
   static const String loginRoute = '/login';
+  static const String homeRoute = '/home';
 
   static List<GetPage<dynamic>>? getPages() {
     return [
@@ -11,6 +12,10 @@ class AppRoutes{
         name: loginRoute,
         page: () => const LoginScreen(),
         binding: BindingsBuilder(() => {Get.put(LoginViewModel())}),
+      ),
+      GetPage(
+        name: homeRoute,
+        page: () => const HomeScreen(),
       ),
     ];
   }

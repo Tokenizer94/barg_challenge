@@ -6,7 +6,7 @@ class OutlinedButtonWidget extends StatelessWidget {
   final double? width;
   final double? height;
   final String btnText;
-  final IconData? btnIcon;
+  final bool isLoading;
   final Function()? onPressBtn;
 
   const OutlinedButtonWidget({
@@ -15,37 +15,26 @@ class OutlinedButtonWidget extends StatelessWidget {
     this.width,
     this.height,
     this.onPressBtn,
-    this.btnIcon,
+    this.isLoading = false,
   }) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
     return SizedBox(
-      width: width ?? 0.4.sw,
+      width: width ?? 0.45.sw,
       height: height ?? 40.h,
       child: OutlinedButton(
         onPressed: onPressBtn,
-        child: Row(
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: <Widget>[
-            if (btnIcon != null) ...[
-              Icon(
-                btnIcon,
-                color: Theme.of(context).colorScheme.surface,
-                size: 18.w,
+        child: isLoading
+            ? const CircularProgressIndicator()
+            : Text(
+                btnText,
+                style: styleGenerator(
+                  fontSize: 14,
+                  fontWeight: FontWeight.w500,
+                  fontColor: Theme.of(context).colorScheme.surface,
+                ),
               ),
-              SizedBox(width: 6.w),
-            ],
-            Text(
-              btnText,
-              style: styleGenerator(
-                fontSize: 14,
-                fontWeight: FontWeight.w500,
-                fontColor: Theme.of(context).colorScheme.surface,
-              ),
-            ),
-          ],
-        ),
       ),
     );
   }

@@ -6,7 +6,7 @@ class ElevatedButtonWidget extends StatelessWidget {
   final double? width;
   final double? height;
   final String btnText;
-  final IconData? btnIcon;
+  final bool isLoading;
   final Function()? onPressBtn;
 
   const ElevatedButtonWidget({
@@ -15,36 +15,25 @@ class ElevatedButtonWidget extends StatelessWidget {
     this.width,
     this.height,
     this.onPressBtn,
-    this.btnIcon,
+    this.isLoading = false,
   }) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
     return SizedBox(
-      width: width ?? 0.4.sw,
+      width: width ?? 0.45.sw,
       height: height ?? 40.h,
       child: ElevatedButton(
         onPressed: onPressBtn,
-        child: Row(
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: <Widget>[
-            if (btnIcon != null) ...[
-              Icon(
-                btnIcon,
-                color: Colors.white,
-                size: 18.w,
+        child: isLoading
+            ? const CircularProgressIndicator()
+            : Text(
+                btnText,
+                style: styleGenerator(
+                  fontSize: 14,
+                  fontWeight: FontWeight.w500,
+                ),
               ),
-              SizedBox(width: 6.w),
-            ],
-            Text(
-              btnText,
-              style: styleGenerator(
-                fontSize: 14,
-                fontWeight: FontWeight.w500,
-              ),
-            ),
-          ],
-        ),
       ),
     );
   }
