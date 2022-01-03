@@ -5,13 +5,13 @@ class HomeViewMobile extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Container(
-      margin: EdgeInsets.symmetric(horizontal: 24.w),
+    return SizedBox(
+      width: double.infinity,
       child: Column(
         children: <Widget>[
-          Text(
-            'Home Page',
-            style: styleGenerator(),
+          const AppbarComponent(
+            titleText: 'Mostafa Fahimi',
+            profileImage: '',
           ),
         ],
       ),
