@@ -2,7 +2,7 @@ part of base_platform;
 
 class PlatformAppBar extends PlatformWidget {
   final Widget? leading;
-  final Widget title;
+  final Widget? title;
   final List<Widget> actions;
   final double? toolbarHeight;
   final bool? centerTitle;
@@ -11,7 +11,7 @@ class PlatformAppBar extends PlatformWidget {
   final PreferredSizeWidget? bottom;
 
   const PlatformAppBar({
-    required this.title,
+    this.title,
     this.leading,
     this.actions = const <Widget>[],
     this.toolbarHeight,

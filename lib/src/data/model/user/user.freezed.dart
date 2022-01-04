@@ -25,24 +25,24 @@ class _$UserTearOff {
   _User call(
       {required String guid,
       required bool isOwner,
-      String? balance,
-      String? picture,
+      String balance = '',
+      String picture = '',
       int? age,
-      String? eyeColor,
-      String? name,
-      String? gender,
-      String? company,
-      String? email,
-      String? phone,
-      String? address,
-      String? about,
-      String? registered,
+      String eyeColor = '',
+      String name = '',
+      String gender = '',
+      String company = '',
+      String email = '',
+      String phone = '',
+      String address = '',
+      String about = '',
+      String registered = '',
       double? latitude,
       double? longitude,
       List<String> tags = const [],
       List<Friend> friends = const [],
-      String? greeting,
-      String? favoriteFruit}) {
+      String greeting = '',
+      String favoriteFruit = ''}) {
     return _User(
       guid: guid,
       isOwner: isOwner,
@@ -79,24 +79,24 @@ const $User = _$UserTearOff();
 mixin _$User {
   String get guid => throw _privateConstructorUsedError;
   bool get isOwner => throw _privateConstructorUsedError;
-  String? get balance => throw _privateConstructorUsedError;
-  String? get picture => throw _privateConstructorUsedError;
+  String get balance => throw _privateConstructorUsedError;
+  String get picture => throw _privateConstructorUsedError;
   int? get age => throw _privateConstructorUsedError;
-  String? get eyeColor => throw _privateConstructorUsedError;
-  String? get name => throw _privateConstructorUsedError;
-  String? get gender => throw _privateConstructorUsedError;
-  String? get company => throw _privateConstructorUsedError;
-  String? get email => throw _privateConstructorUsedError;
-  String? get phone => throw _privateConstructorUsedError;
-  String? get address => throw _privateConstructorUsedError;
-  String? get about => throw _privateConstructorUsedError;
-  String? get registered => throw _privateConstructorUsedError;
+  String get eyeColor => throw _privateConstructorUsedError;
+  String get name => throw _privateConstructorUsedError;
+  String get gender => throw _privateConstructorUsedError;
+  String get company => throw _privateConstructorUsedError;
+  String get email => throw _privateConstructorUsedError;
+  String get phone => throw _privateConstructorUsedError;
+  String get address => throw _privateConstructorUsedError;
+  String get about => throw _privateConstructorUsedError;
+  String get registered => throw _privateConstructorUsedError;
   double? get latitude => throw _privateConstructorUsedError;
   double? get longitude => throw _privateConstructorUsedError;
   List<String> get tags => throw _privateConstructorUsedError;
   List<Friend> get friends => throw _privateConstructorUsedError;
-  String? get greeting => throw _privateConstructorUsedError;
-  String? get favoriteFruit => throw _privateConstructorUsedError;
+  String get greeting => throw _privateConstructorUsedError;
+  String get favoriteFruit => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
@@ -110,24 +110,24 @@ abstract class $UserCopyWith<$Res> {
   $Res call(
       {String guid,
       bool isOwner,
-      String? balance,
-      String? picture,
+      String balance,
+      String picture,
       int? age,
-      String? eyeColor,
-      String? name,
-      String? gender,
-      String? company,
-      String? email,
-      String? phone,
-      String? address,
-      String? about,
-      String? registered,
+      String eyeColor,
+      String name,
+      String gender,
+      String company,
+      String email,
+      String phone,
+      String address,
+      String about,
+      String registered,
       double? latitude,
       double? longitude,
       List<String> tags,
       List<Friend> friends,
-      String? greeting,
-      String? favoriteFruit});
+      String greeting,
+      String favoriteFruit});
 }
 
 /// @nodoc
@@ -173,11 +173,11 @@ class _$UserCopyWithImpl<$Res> implements $UserCopyWith<$Res> {
       balance: balance == freezed
           ? _value.balance
           : balance // ignore: cast_nullable_to_non_nullable
-              as String?,
+              as String,
       picture: picture == freezed
           ? _value.picture
           : picture // ignore: cast_nullable_to_non_nullable
-              as String?,
+              as String,
       age: age == freezed
           ? _value.age
           : age // ignore: cast_nullable_to_non_nullable
@@ -185,39 +185,39 @@ class _$UserCopyWithImpl<$Res> implements $UserCopyWith<$Res> {
       eyeColor: eyeColor == freezed
           ? _value.eyeColor
           : eyeColor // ignore: cast_nullable_to_non_nullable
-              as String?,
+              as String,
       name: name == freezed
           ? _value.name
           : name // ignore: cast_nullable_to_non_nullable
-              as String?,
+              as String,
       gender: gender == freezed
           ? _value.gender
           : gender // ignore: cast_nullable_to_non_nullable
-              as String?,
+              as String,
       company: company == freezed
           ? _value.company
           : company // ignore: cast_nullable_to_non_nullable
-              as String?,
+              as String,
       email: email == freezed
           ? _value.email
           : email // ignore: cast_nullable_to_non_nullable
-              as String?,
+              as String,
       phone: phone == freezed
           ? _value.phone
           : phone // ignore: cast_nullable_to_non_nullable
-              as String?,
+              as String,
       address: address == freezed
           ? _value.address
           : address // ignore: cast_nullable_to_non_nullable
-              as String?,
+              as String,
       about: about == freezed
           ? _value.about
           : about // ignore: cast_nullable_to_non_nullable
-              as String?,
+              as String,
       registered: registered == freezed
           ? _value.registered
           : registered // ignore: cast_nullable_to_non_nullable
-              as String?,
+              as String,
       latitude: latitude == freezed
           ? _value.latitude
           : latitude // ignore: cast_nullable_to_non_nullable
@@ -237,11 +237,11 @@ class _$UserCopyWithImpl<$Res> implements $UserCopyWith<$Res> {
       greeting: greeting == freezed
           ? _value.greeting
           : greeting // ignore: cast_nullable_to_non_nullable
-              as String?,
+              as String,
       favoriteFruit: favoriteFruit == freezed
           ? _value.favoriteFruit
           : favoriteFruit // ignore: cast_nullable_to_non_nullable
-              as String?,
+              as String,
     ));
   }
 }
@@ -254,24 +254,24 @@ abstract class _$UserCopyWith<$Res> implements $UserCopyWith<$Res> {
   $Res call(
       {String guid,
       bool isOwner,
-      String? balance,
-      String? picture,
+      String balance,
+      String picture,
       int? age,
-      String? eyeColor,
-      String? name,
-      String? gender,
-      String? company,
-      String? email,
-      String? phone,
-      String? address,
-      String? about,
-      String? registered,
+      String eyeColor,
+      String name,
+      String gender,
+      String company,
+      String email,
+      String phone,
+      String address,
+      String about,
+      String registered,
       double? latitude,
       double? longitude,
       List<String> tags,
       List<Friend> friends,
-      String? greeting,
-      String? favoriteFruit});
+      String greeting,
+      String favoriteFruit});
 }
 
 /// @nodoc
@@ -318,11 +318,11 @@ class __$UserCopyWithImpl<$Res> extends _$UserCopyWithImpl<$Res>
       balance: balance == freezed
           ? _value.balance
           : balance // ignore: cast_nullable_to_non_nullable
-              as String?,
+              as String,
       picture: picture == freezed
           ? _value.picture
           : picture // ignore: cast_nullable_to_non_nullable
-              as String?,
+              as String,
       age: age == freezed
           ? _value.age
           : age // ignore: cast_nullable_to_non_nullable
@@ -330,39 +330,39 @@ class __$UserCopyWithImpl<$Res> extends _$UserCopyWithImpl<$Res>
       eyeColor: eyeColor == freezed
           ? _value.eyeColor
           : eyeColor // ignore: cast_nullable_to_non_nullable
-              as String?,
+              as String,
       name: name == freezed
           ? _value.name
           : name // ignore: cast_nullable_to_non_nullable
-              as String?,
+              as String,
       gender: gender == freezed
           ? _value.gender
           : gender // ignore: cast_nullable_to_non_nullable
-              as String?,
+              as String,
       company: company == freezed
           ? _value.company
           : company // ignore: cast_nullable_to_non_nullable
-              as String?,
+              as String,
       email: email == freezed
           ? _value.email
           : email // ignore: cast_nullable_to_non_nullable
-              as String?,
+              as String,
       phone: phone == freezed
           ? _value.phone
           : phone // ignore: cast_nullable_to_non_nullable
-              as String?,
+              as String,
       address: address == freezed
           ? _value.address
           : address // ignore: cast_nullable_to_non_nullable
-              as String?,
+              as String,
       about: about == freezed
           ? _value.about
           : about // ignore: cast_nullable_to_non_nullable
-              as String?,
+              as String,
       registered: registered == freezed
           ? _value.registered
           : registered // ignore: cast_nullable_to_non_nullable
-              as String?,
+              as String,
       latitude: latitude == freezed
           ? _value.latitude
           : latitude // ignore: cast_nullable_to_non_nullable
@@ -382,11 +382,11 @@ class __$UserCopyWithImpl<$Res> extends _$UserCopyWithImpl<$Res>
       greeting: greeting == freezed
           ? _value.greeting
           : greeting // ignore: cast_nullable_to_non_nullable
-              as String?,
+              as String,
       favoriteFruit: favoriteFruit == freezed
           ? _value.favoriteFruit
           : favoriteFruit // ignore: cast_nullable_to_non_nullable
-              as String?,
+              as String,
     ));
   }
 }
@@ -397,24 +397,24 @@ class _$_User with DiagnosticableTreeMixin implements _User {
   const _$_User(
       {required this.guid,
       required this.isOwner,
-      this.balance,
-      this.picture,
+      this.balance = '',
+      this.picture = '',
       this.age,
-      this.eyeColor,
-      this.name,
-      this.gender,
-      this.company,
-      this.email,
-      this.phone,
-      this.address,
-      this.about,
-      this.registered,
+      this.eyeColor = '',
+      this.name = '',
+      this.gender = '',
+      this.company = '',
+      this.email = '',
+      this.phone = '',
+      this.address = '',
+      this.about = '',
+      this.registered = '',
       this.latitude,
       this.longitude,
       this.tags = const [],
       this.friends = const [],
-      this.greeting,
-      this.favoriteFruit});
+      this.greeting = '',
+      this.favoriteFruit = ''});
 
   factory _$_User.fromJson(Map<String, dynamic> json) => _$$_UserFromJson(json);
 
@@ -422,30 +422,41 @@ class _$_User with DiagnosticableTreeMixin implements _User {
   final String guid;
   @override
   final bool isOwner;
+  @JsonKey()
   @override
-  final String? balance;
+  final String balance;
+  @JsonKey()
   @override
-  final String? picture;
+  final String picture;
   @override
   final int? age;
+  @JsonKey()
   @override
-  final String? eyeColor;
+  final String eyeColor;
+  @JsonKey()
   @override
-  final String? name;
+  final String name;
+  @JsonKey()
   @override
-  final String? gender;
+  final String gender;
+  @JsonKey()
   @override
-  final String? company;
+  final String company;
+  @JsonKey()
   @override
-  final String? email;
+  final String email;
+  @JsonKey()
   @override
-  final String? phone;
+  final String phone;
+  @JsonKey()
   @override
-  final String? address;
+  final String address;
+  @JsonKey()
   @override
-  final String? about;
+  final String about;
+  @JsonKey()
   @override
-  final String? registered;
+  final String registered;
   @override
   final double? latitude;
   @override
@@ -456,10 +467,12 @@ class _$_User with DiagnosticableTreeMixin implements _User {
   @JsonKey()
   @override
   final List<Friend> friends;
+  @JsonKey()
   @override
-  final String? greeting;
+  final String greeting;
+  @JsonKey()
   @override
-  final String? favoriteFruit;
+  final String favoriteFruit;
 
   @override
   String toString({DiagnosticLevel minLevel = DiagnosticLevel.info}) {
@@ -562,24 +575,24 @@ abstract class _User implements User {
   const factory _User(
       {required String guid,
       required bool isOwner,
-      String? balance,
-      String? picture,
+      String balance,
+      String picture,
       int? age,
-      String? eyeColor,
-      String? name,
-      String? gender,
-      String? company,
-      String? email,
-      String? phone,
-      String? address,
-      String? about,
-      String? registered,
+      String eyeColor,
+      String name,
+      String gender,
+      String company,
+      String email,
+      String phone,
+      String address,
+      String about,
+      String registered,
       double? latitude,
       double? longitude,
       List<String> tags,
       List<Friend> friends,
-      String? greeting,
-      String? favoriteFruit}) = _$_User;
+      String greeting,
+      String favoriteFruit}) = _$_User;
 
   factory _User.fromJson(Map<String, dynamic> json) = _$_User.fromJson;
 
@@ -588,29 +601,29 @@ abstract class _User implements User {
   @override
   bool get isOwner;
   @override
-  String? get balance;
+  String get balance;
   @override
-  String? get picture;
+  String get picture;
   @override
   int? get age;
   @override
-  String? get eyeColor;
+  String get eyeColor;
   @override
-  String? get name;
+  String get name;
   @override
-  String? get gender;
+  String get gender;
   @override
-  String? get company;
+  String get company;
   @override
-  String? get email;
+  String get email;
   @override
-  String? get phone;
+  String get phone;
   @override
-  String? get address;
+  String get address;
   @override
-  String? get about;
+  String get about;
   @override
-  String? get registered;
+  String get registered;
   @override
   double? get latitude;
   @override
@@ -620,9 +633,9 @@ abstract class _User implements User {
   @override
   List<Friend> get friends;
   @override
-  String? get greeting;
+  String get greeting;
   @override
-  String? get favoriteFruit;
+  String get favoriteFruit;
   @override
   @JsonKey(ignore: true)
   _$UserCopyWith<_User> get copyWith => throw _privateConstructorUsedError;

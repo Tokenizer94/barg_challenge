@@ -1,3 +1,4 @@
+import 'package:barg_challenge/injector.dart';
 import 'package:barg_challenge/src/config/app_routes.dart';
 import 'package:barg_challenge/src/core/constant/constant.dart';
 import 'package:barg_challenge/src/core/util/util.dart';
@@ -7,7 +8,7 @@ import 'package:get/get.dart';
 
 class LoginViewModel extends GetxController {
   /// `Variables`
-  AuthApiService _authApiService = AuthApiService();
+  AuthApiService _authApiService = injector<AuthApiService>();
   String username = '';
   String password = '';
   GlobalKey<FormState> loginFormKey = GlobalKey<FormState>();

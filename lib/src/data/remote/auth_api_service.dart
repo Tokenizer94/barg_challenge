@@ -2,10 +2,10 @@
 class AuthApiService {
   /// Fake login service
   Future<bool> login(String username, String password) async {
-    await Future.delayed(const Duration(milliseconds: 2000));
+    await Future.delayed(const Duration(milliseconds: 1200));
 
     /// If [username] and [password] are correct then we return `true`
-    if (username == 'test' && password == '12345678') {
+    if (username == 'aaa' && password == 'aaaaaaaa') {
       return true;
     }
     return false;

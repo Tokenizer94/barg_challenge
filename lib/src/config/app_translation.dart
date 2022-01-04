@@ -15,6 +15,7 @@ final Map<String, String> en_US = {
   'char_required': 'characters required',
   'required':'required*',
   'login_failed':'Login Failed',
+  'address':'Address',
   /// Long Texts
   'login_fail_desc':'Username or password is not correct',
 };

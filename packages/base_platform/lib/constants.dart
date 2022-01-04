@@ -1,4 +1,4 @@
 part of base_platform;
 
-const Size designSize = Size(360, 690);
-const Size designSizeDesktop = Size(900, 1600);
+const Size designSize = Size(360, 640);
+const Size designSizeDesktop = Size(640, 1280);

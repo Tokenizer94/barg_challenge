@@ -1,4 +1,5 @@
 import 'package:barg_challenge/src/domain/login_viewmodel.dart';
+import 'package:barg_challenge/src/domain/user_viewmodel.dart';
 import 'package:barg_challenge/src/presentation/presentation.dart';
 import 'package:get/get.dart';
 
@@ -16,6 +17,7 @@ class AppRoutes{
       GetPage(
         name: homeRoute,
         page: () => const HomeScreen(),
+        binding: BindingsBuilder(() => {Get.put(UserViewModel())}),
       ),
     ];
   }

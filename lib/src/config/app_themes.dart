@@ -1,13 +1,13 @@
 import 'package:barg_challenge/src/core/constant/constant.dart';
 import 'package:flutter/material.dart';
 
-class AppTheme{
+class AppTheme {
   static ThemeData get light {
     return ThemeData(
       scaffoldBackgroundColor: kPaletteColors[3],
       highlightColor: kPaletteColors[1].withOpacity(0.6),
       appBarTheme: AppBarTheme(
-        elevation: 0.0,
+        elevation: 6.0,
         backgroundColor: kPaletteColors[3],
       ),
       colorScheme: ColorScheme.light(
