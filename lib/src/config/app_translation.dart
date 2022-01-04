@@ -23,6 +23,8 @@ final Map<String, String> en_US = {
   'friends':'Friends',
   'greeting':'Greeting',
   'edit':'Edit',
+  'user_not_founded':'User not founded',
   /// Long Texts
   'login_fail_desc':'Username or password is not correct',
+  'user_not_founded_desc':'Cannot find that user!',
 };

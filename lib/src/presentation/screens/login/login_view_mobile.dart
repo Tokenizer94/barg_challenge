@@ -33,11 +33,12 @@ class LoginViewMobile extends HookWidget {
                 ),
                 SizedBox(height: 0.3.sh),
 
-                /// Login button
+                /// `Login button`
                 GetBuilder(
                   builder: (LoginViewModel loginViewModel) {
                     return ElevatedButtonWidget(
                       btnText: 'login'.tr,
+                      width: 0.5.sw,
                       isLoading:
                           loginViewModel.loginState == LoginState.in_progress,
                       onPressBtn:

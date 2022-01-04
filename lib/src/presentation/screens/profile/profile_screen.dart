@@ -1,3 +1,4 @@
+import 'package:barg_challenge/src/core/util/util.dart';
 import 'package:barg_challenge/src/domain/user_viewmodel.dart';
 import 'package:barg_challenge/src/presentation/components/components.dart';
 import 'package:barg_challenge/src/presentation/screens/profile/widgets/custom_richtext_widget.dart';
