@@ -649,7 +649,7 @@ Friend _$FriendFromJson(Map<String, dynamic> json) {
 class _$FriendTearOff {
   const _$FriendTearOff();
 
-  _Friend call({required int id, required String guid, String? name}) {
+  _Friend call({required int id, required String guid, String name = ''}) {
     return _Friend(
       id: id,
       guid: guid,
@@ -669,7 +669,7 @@ const $Friend = _$FriendTearOff();
 mixin _$Friend {
   int get id => throw _privateConstructorUsedError;
   String get guid => throw _privateConstructorUsedError;
-  String? get name => throw _privateConstructorUsedError;
+  String get name => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
@@ -680,7 +680,7 @@ mixin _$Friend {
 abstract class $FriendCopyWith<$Res> {
   factory $FriendCopyWith(Friend value, $Res Function(Friend) then) =
       _$FriendCopyWithImpl<$Res>;
-  $Res call({int id, String guid, String? name});
+  $Res call({int id, String guid, String name});
 }
 
 /// @nodoc
@@ -709,7 +709,7 @@ class _$FriendCopyWithImpl<$Res> implements $FriendCopyWith<$Res> {
       name: name == freezed
           ? _value.name
           : name // ignore: cast_nullable_to_non_nullable
-              as String?,
+              as String,
     ));
   }
 }
@@ -719,7 +719,7 @@ abstract class _$FriendCopyWith<$Res> implements $FriendCopyWith<$Res> {
   factory _$FriendCopyWith(_Friend value, $Res Function(_Friend) then) =
       __$FriendCopyWithImpl<$Res>;
   @override
-  $Res call({int id, String guid, String? name});
+  $Res call({int id, String guid, String name});
 }
 
 /// @nodoc
@@ -749,7 +749,7 @@ class __$FriendCopyWithImpl<$Res> extends _$FriendCopyWithImpl<$Res>
       name: name == freezed
           ? _value.name
           : name // ignore: cast_nullable_to_non_nullable
-              as String?,
+              as String,
     ));
   }
 }
@@ -757,7 +757,7 @@ class __$FriendCopyWithImpl<$Res> extends _$FriendCopyWithImpl<$Res>
 /// @nodoc
 @JsonSerializable()
 class _$_Friend with DiagnosticableTreeMixin implements _Friend {
-  const _$_Friend({required this.id, required this.guid, this.name});
+  const _$_Friend({required this.id, required this.guid, this.name = ''});
 
   factory _$_Friend.fromJson(Map<String, dynamic> json) =>
       _$$_FriendFromJson(json);
@@ -766,8 +766,9 @@ class _$_Friend with DiagnosticableTreeMixin implements _Friend {
   final int id;
   @override
   final String guid;
+  @JsonKey()
   @override
-  final String? name;
+  final String name;
 
   @override
   String toString({DiagnosticLevel minLevel = DiagnosticLevel.info}) {
@@ -813,7 +814,7 @@ class _$_Friend with DiagnosticableTreeMixin implements _Friend {
 }
 
 abstract class _Friend implements Friend {
-  const factory _Friend({required int id, required String guid, String? name}) =
+  const factory _Friend({required int id, required String guid, String name}) =
       _$_Friend;
 
   factory _Friend.fromJson(Map<String, dynamic> json) = _$_Friend.fromJson;
@@ -823,7 +824,7 @@ abstract class _Friend implements Friend {
   @override
   String get guid;
   @override
-  String? get name;
+  String get name;
   @override
   @JsonKey(ignore: true)
   _$FriendCopyWith<_Friend> get copyWith => throw _privateConstructorUsedError;

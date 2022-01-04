@@ -15,6 +15,7 @@ class HomeViewMobile extends StatelessWidget {
               return AppbarComponent(
                 titleText: userViewModel.currentUser.name,
                 profileImage: userViewModel.currentUser.picture,
+                onTap: () => _onTapAppbar(userViewModel),
               );
             },
           ),
@@ -24,6 +25,12 @@ class HomeViewMobile extends StatelessWidget {
         ],
       ),
     );
+  }
+
+  void _onTapAppbar(UserViewModel userViewModel) {
+    if (!userViewModel.isDataLoaded) return;
+    userViewModel.selectedUserForProfileInspection = userViewModel.currentUser;
+    Get.toNamed(AppRoutes.profileRoute);
   }
 }
 
@@ -101,8 +108,6 @@ class UsersListViewItemWidget extends StatelessWidget {
   Widget build(BuildContext context) {
     UserViewModel _userViewModel = Get.find<UserViewModel>();
     return Card(
-      color: Theme.of(context).colorScheme.secondary,
-      elevation: 4,
       child: Padding(
         padding: EdgeInsets.all(16.w),
         child: Column(
@@ -165,7 +170,6 @@ class DummyListViewWidget extends StatelessWidget {
   Widget build(BuildContext context) {
     return Card(
       color: Colors.white70,
-      elevation: 4,
       child: Padding(
         padding: EdgeInsets.all(16.w),
         child: Column(

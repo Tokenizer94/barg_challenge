@@ -36,7 +36,7 @@ class Friend with _$Friend {
   const factory Friend({
     required int id,
     required String guid,
-    String? name,
+    @Default('') String name,
   }) = _Friend;
   factory Friend.fromJson(Map<String, dynamic> json) => _$FriendFromJson(json);
 }
