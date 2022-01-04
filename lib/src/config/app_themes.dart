@@ -1,5 +1,6 @@
 import 'package:barg_challenge/src/core/constant/constant.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 class AppTheme {
   static ThemeData get light {
@@ -16,12 +17,19 @@ class AppTheme {
         background: kPaletteColors[3],
         surface: kPaletteColors[2],
       ),
+      cardTheme: CardTheme(
+        color: kPaletteColors[1],
+        elevation: 4.0,
+        shape: RoundedRectangleBorder(
+          borderRadius: BorderRadius.circular(kBorderRadius.r),
+        ),
+      ),
       elevatedButtonTheme: ElevatedButtonThemeData(
         style: OutlinedButton.styleFrom(
           backgroundColor: kPaletteColors[2],
-          shape: const RoundedRectangleBorder(
+          shape: RoundedRectangleBorder(
             borderRadius: BorderRadius.all(
-              Radius.circular(kBorderRadius),
+              Radius.circular(kBorderRadius.r),
             ),
           ),
           elevation: 0,
@@ -30,9 +38,9 @@ class AppTheme {
       outlinedButtonTheme: OutlinedButtonThemeData(
         style: OutlinedButton.styleFrom(
           backgroundColor: Colors.transparent,
-          shape: const RoundedRectangleBorder(
+          shape: RoundedRectangleBorder(
             borderRadius: BorderRadius.all(
-              Radius.circular(kBorderRadius),
+              Radius.circular(kBorderRadius.r),
             ),
           ),
           side: BorderSide(width: 3, color: kPaletteColors[2]),

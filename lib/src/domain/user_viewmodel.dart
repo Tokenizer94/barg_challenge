@@ -6,7 +6,14 @@ import 'package:get/get_state_manager/get_state_manager.dart';
 class UserViewModel extends GetxController {
   /// `Variables`
   UserApiService _userApiService = injector<UserApiService>();
+
+  /// [_isDataLoaded] for handle loading in the view of UI
   bool _isDataLoaded = false;
+  User _selectedUserForProfileInspection = const User(
+    guid: '',
+    isOwner: true,
+    name: 'Unknown user',
+  );
   List<User> _users = [];
   User _currentUser = const User(
     guid: '',
@@ -16,12 +23,19 @@ class UserViewModel extends GetxController {
 
   /// `Getters`
   bool get isDataLoaded => _isDataLoaded;
+  User get selectedUserForProfileInspection =>
+      _selectedUserForProfileInspection;
   List<User> get users => _users;
   User get currentUser => _currentUser;
 
   /// `Setters`
   set isDataLoaded(bool value) {
     _isDataLoaded = value;
+    update();
+  }
+
+  set selectedUserForProfileInspection(User value) {
+    _selectedUserForProfileInspection = value;
     update();
   }
 

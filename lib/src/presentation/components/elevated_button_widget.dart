@@ -30,7 +30,7 @@ class ElevatedButtonWidget extends StatelessWidget {
             : Text(
                 btnText,
                 style: styleGenerator(
-                  fontSize: 14,
+                  fontSize: 13,
                   fontWeight: FontWeight.w500,
                 ),
               ),
