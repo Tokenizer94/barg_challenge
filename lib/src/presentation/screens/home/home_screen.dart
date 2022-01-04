@@ -5,6 +5,7 @@ import 'package:base_platform/base_platform.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:get/get.dart';
+import 'package:shimmer/shimmer.dart';
 
 part 'home_view_mobile.dart';
 

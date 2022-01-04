@@ -6,6 +6,7 @@ import 'package:get/get_state_manager/get_state_manager.dart';
 class UserViewModel extends GetxController {
   /// `Variables`
   UserApiService _userApiService = injector<UserApiService>();
+  bool _isDataLoaded = false;
   List<User> _users = [];
   User _currentUser = const User(
     guid: '',
@@ -14,10 +15,16 @@ class UserViewModel extends GetxController {
   );
 
   /// `Getters`
+  bool get isDataLoaded => _isDataLoaded;
   List<User> get users => _users;
   User get currentUser => _currentUser;
 
   /// `Setters`
+  set isDataLoaded(bool value) {
+    _isDataLoaded = value;
+    update();
+  }
+
   set users(List<User> value) {
     if (!listEquals(_users, value)) {
       _users = value;
@@ -41,6 +48,7 @@ class UserViewModel extends GetxController {
       (fail) => null,
       (usersResult) {
         users = usersResult;
+        isDataLoaded = true;
       },
     );
   }
@@ -55,6 +63,7 @@ class UserViewModel extends GetxController {
   }
 
   Future refreshData() async {
+    isDataLoaded = false;
     await getUsers();
     findAndUpdateCurrentUser();
   }

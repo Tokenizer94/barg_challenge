@@ -14,17 +14,22 @@ class UserAvatarComponent extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    /// Here we use 2 CircleAvatar. First one is just for placeholder and second one is
-    /// the network image. So if we cannot load image from network then the placeholder 
-    /// will be visible. There are many other solutions but this one is the best solution.
-    return CircleAvatar(
-      radius: radius ?? 20.w,
-      backgroundColor: Colors.transparent,
-      backgroundImage: const AssetImage(kAvatarPlaceHolderAsset),
-      child: CircleAvatar(
-        radius: radius ?? 20.w,
-        backgroundColor: Colors.transparent,
-        backgroundImage: NetworkImage(image),
+    return Container(
+      width: 40.w,
+      height: 40.w,
+      decoration: const BoxDecoration(
+        color: Colors.transparent,
+        shape: BoxShape.circle,
+      ),
+      child: ClipOval(
+        child: FadeInImage.assetNetwork(
+          placeholder: kAvatarPlaceHolderAsset,
+          image: image,
+          fit: BoxFit.cover,
+          imageErrorBuilder: (_, __, ___) {
+            return Image.asset(kAvatarPlaceHolderAsset);
+          },
+        ),
       ),
     );
   }

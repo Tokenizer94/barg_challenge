@@ -11,7 +11,7 @@ class GetUsersFailure implements Exception {}
 class UserApiService {
   Future<Either<Exception, List<User>>> getUsersList() async {
     try {
-      await Future.delayed(const Duration(milliseconds: 1000));
+      await Future.delayed(const Duration(milliseconds: 4000));
       /// Load fake json response from asset file
       final _jsonString = await _loadJsonAsset();
       final _decoded = await jsonDecode(_jsonString) as List;
